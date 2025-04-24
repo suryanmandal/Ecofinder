@@ -89,6 +89,32 @@
             margin: 5px;
         }
 
+        .purchase-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 15px;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .purchase-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+        }
+
         .navbar {
             background-color: white !important;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -235,18 +261,21 @@
                         name: 'Bamboo Utensil Set',
                         description: 'Sustainable bamboo kitchen utensils, perfect replacement for plastic ones',
                         price: '$24.99',
+                        purchaseLink: 'https://example.com/bamboo-utensils',
                         ecoFeatures: ['Biodegradable', 'Renewable Material', 'Plastic-free']
                     },
                     {
                         name: 'Stainless Steel Cutlery Set',
                         description: 'Long-lasting stainless steel utensils with minimal environmental impact',
                         price: '$39.99',
+                        purchaseLink: 'https://example.com/steel-cutlery',
                         ecoFeatures: ['Durable', 'Recyclable', 'Plastic-free']
                     },
                     {
                         name: 'Coconut Bowl Set',
                         description: 'Natural coconut shell bowls, perfect for sustainable dining',
                         price: '$19.99',
+                        purchaseLink: 'https://example.com/coconut-bowls',
                         ecoFeatures: ['Natural Material', 'Biodegradable', 'Zero Waste']
                     }
                 ],
@@ -255,18 +284,21 @@
                         name: 'Organic Cotton T-Shirt',
                         description: 'Made from 100% organic cotton, perfect for everyday wear',
                         price: '$29.99',
+                        purchaseLink: 'https://example.com/organic-tshirt',
                         ecoFeatures: ['Organic', 'Sustainable Cotton', 'Chemical-free']
                     },
                     {
                         name: 'Recycled Denim Jeans',
                         description: 'Stylish jeans made from recycled denim materials',
                         price: '$59.99',
+                        purchaseLink: 'https://example.com/recycled-jeans',
                         ecoFeatures: ['Recycled Materials', 'Water-saving', 'Sustainable Fashion']
                     },
                     {
                         name: 'Hemp Fabric Shoes',
                         description: 'Comfortable shoes made from sustainable hemp fabric',
                         price: '$49.99',
+                        purchaseLink: 'https://example.com/hemp-shoes',
                         ecoFeatures: ['Natural Materials', 'Biodegradable', 'Vegan']
                     }
                 ],
@@ -275,18 +307,21 @@
                         name: 'Bamboo Toothbrush',
                         description: 'Eco-friendly bamboo toothbrush with soft bristles',
                         price: '$4.99',
+                        purchaseLink: 'https://example.com/bamboo-toothbrush',
                         ecoFeatures: ['Biodegradable Handle', 'Plastic-free', 'Sustainable']
                     },
                     {
                         name: 'Natural Loofah Sponge',
                         description: 'Natural and biodegradable bath sponge',
                         price: '$6.99',
+                        purchaseLink: 'https://example.com/natural-loofah',
                         ecoFeatures: ['100% Natural', 'Biodegradable', 'Plastic-free']
                     },
                     {
                         name: 'Shampoo Bar',
                         description: 'Zero-waste solid shampoo bar with natural ingredients',
                         price: '$12.99',
+                        purchaseLink: 'https://example.com/shampoo-bar',
                         ecoFeatures: ['Zero Waste', 'Natural Ingredients', 'Plastic-free Packaging']
                     }
                 ]
@@ -303,12 +338,15 @@
                         <div class="feature-card">
                             <h3>${result.name}</h3>
                             <p>${result.description}</p>
-                            <p class="fw-bold">${result.price}</p>
                             <div class="eco-features">
                                 ${result.ecoFeatures.map(feature => `
                                     <span class="eco-tag">${feature}</span>
                                 `).join('')}
                             </div>
+                            <div class="price-row">
+                                <p class="fw-bold mb-0">${result.price}</p>
+                            </div>
+                            <a href="${result.purchaseLink}" target="_blank" class="purchase-btn">Purchase Now</a>
                         </div>
                     </div>
                 `;
