@@ -182,6 +182,16 @@
                 <option value="clothing">Clothing</option>
                 <option value="electronics">Electronics</option>
                 <option value="home">Home</option>
+                <option value="personal-care">Personal Care & Beauty</option>
+                <option value="office">Office & Stationery</option>
+                <option value="travel">Travel & Commuting</option>
+                <option value="furniture">Furniture & Decor</option>
+                <option value="garden">Garden & Outdoor</option>
+                <option value="pets">Pet Supplies</option>
+                <option value="baby">Baby & Kids</option>
+                <option value="food">Food & Beverages</option>
+                <option value="cleaning">Cleaning Supplies</option>
+                <option value="fitness">Fitness & Sports</option>
             </select>
             <input type="text" class="search-input" placeholder="Specific product (e.g., utensils in Kitchen)" id="product-search">
             <input type="number" class="category-select" placeholder="Results count" value="3" min="1" max="10" id="results-count">
@@ -220,7 +230,17 @@
             'bathroom': 'toothbrush in Bathroom',
             'clothing': 'shoes in Fashion',
             'electronics': 'charger in Electronics',
-            'home': 'lights in Home'
+            'home': 'lights in Home',
+            'personal-care': 'shampoo in Personal Care',
+            'office': 'notebook in Office',
+            'travel': 'water bottle in Travel',
+            'furniture': 'chair in Furniture',
+            'garden': 'plant pots in Garden',
+            'pets': 'dog bed in Pets',
+            'baby': 'diapers in Baby',
+            'food': 'snacks in Food',
+            'cleaning': 'detergent in Cleaning',
+            'fitness': 'yoga mat in Fitness'
         };
 
         // Update placeholder when category changes
@@ -323,6 +343,236 @@
                         price: '$12.99',
                         purchaseLink: 'https://example.com/shampoo-bar',
                         ecoFeatures: ['Zero Waste', 'Natural Ingredients', 'Plastic-free Packaging']
+                    }
+                ],
+                'personal-care': [
+                    {
+                        name: 'Natural Deodorant',
+                        description: 'Chemical-free deodorant made with natural ingredients',
+                        price: '$14.99',
+                        purchaseLink: 'https://example.com/natural-deodorant',
+                        ecoFeatures: ['Natural Ingredients', 'Plastic-free', 'Cruelty-free']
+                    },
+                    {
+                        name: 'Reusable Makeup Remover Pads',
+                        description: 'Washable and reusable cotton pads for makeup removal',
+                        price: '$12.99',
+                        purchaseLink: 'https://example.com/reusable-pads',
+                        ecoFeatures: ['Reusable', 'Washable', 'Zero Waste']
+                    },
+                    {
+                        name: 'Solid Perfume',
+                        description: 'Natural solid perfume in sustainable packaging',
+                        price: '$19.99',
+                        purchaseLink: 'https://example.com/solid-perfume',
+                        ecoFeatures: ['Plastic-free', 'Natural Ingredients', 'Vegan']
+                    }
+                ],
+                'office': [
+                    {
+                        name: 'Recycled Paper Notebook',
+                        description: 'Notebook made from 100% recycled paper',
+                        price: '$8.99',
+                        purchaseLink: 'https://example.com/recycled-notebook',
+                        ecoFeatures: ['Recycled Materials', 'Sustainable Paper', 'Biodegradable']
+                    },
+                    {
+                        name: 'Bamboo Pen',
+                        description: 'Eco-friendly pen made from sustainable bamboo',
+                        price: '$4.99',
+                        purchaseLink: 'https://example.com/bamboo-pen',
+                        ecoFeatures: ['Sustainable Material', 'Biodegradable', 'Plastic-free']
+                    },
+                    {
+                        name: 'Plantable Pencils',
+                        description: 'Pencils that can be planted to grow herbs or flowers',
+                        price: '$12.99',
+                        purchaseLink: 'https://example.com/plantable-pencils',
+                        ecoFeatures: ['Plantable', 'Biodegradable', 'Zero Waste']
+                    }
+                ],
+                'travel': [
+                    {
+                        name: 'Collapsible Water Bottle',
+                        description: 'Space-saving reusable water bottle for travel',
+                        price: '$19.99',
+                        purchaseLink: 'https://example.com/collapsible-bottle',
+                        ecoFeatures: ['Reusable', 'Space-saving', 'Plastic-free']
+                    },
+                    {
+                        name: 'Solar-Powered Backpack',
+                        description: 'Backpack with built-in solar panels for charging devices',
+                        price: '$89.99',
+                        purchaseLink: 'https://example.com/solar-backpack',
+                        ecoFeatures: ['Solar-powered', 'Sustainable Materials', 'Energy-efficient']
+                    },
+                    {
+                        name: 'Bamboo Travel Utensils',
+                        description: 'Compact set of bamboo utensils for sustainable travel',
+                        price: '$15.99',
+                        purchaseLink: 'https://example.com/travel-utensils',
+                        ecoFeatures: ['Biodegradable', 'Lightweight', 'Plastic-free']
+                    }
+                ],
+                'furniture': [
+                    {
+                        name: 'Reclaimed Wood Coffee Table',
+                        description: 'Beautiful coffee table made from reclaimed wood',
+                        price: '$199.99',
+                        purchaseLink: 'https://example.com/reclaimed-table',
+                        ecoFeatures: ['Reclaimed Materials', 'Sustainable Wood', 'Handcrafted']
+                    },
+                    {
+                        name: 'Organic Cotton Cushions',
+                        description: 'Decorative cushions made from organic cotton',
+                        price: '$29.99',
+                        purchaseLink: 'https://example.com/organic-cushions',
+                        ecoFeatures: ['Organic Materials', 'Natural Dyes', 'Sustainable']
+                    },
+                    {
+                        name: 'Bamboo Floor Lamp',
+                        description: 'Elegant floor lamp made from sustainable bamboo',
+                        price: '$79.99',
+                        purchaseLink: 'https://example.com/bamboo-lamp',
+                        ecoFeatures: ['Sustainable Material', 'Energy-efficient', 'Natural']
+                    }
+                ],
+                'garden': [
+                    {
+                        name: 'Compostable Plant Pots',
+                        description: 'Biodegradable plant pots made from natural materials',
+                        price: '$12.99',
+                        purchaseLink: 'https://example.com/compostable-pots',
+                        ecoFeatures: ['Biodegradable', 'Natural Materials', 'Zero Waste']
+                    },
+                    {
+                        name: 'Solar Garden Lights',
+                        description: 'Energy-efficient solar-powered garden lighting',
+                        price: '$24.99',
+                        purchaseLink: 'https://example.com/solar-lights',
+                        ecoFeatures: ['Solar-powered', 'Energy-efficient', 'Sustainable']
+                    },
+                    {
+                        name: 'Rainwater Collection System',
+                        description: 'Sustainable water collection for garden irrigation',
+                        price: '$89.99',
+                        purchaseLink: 'https://example.com/rainwater-system',
+                        ecoFeatures: ['Water-saving', 'Sustainable', 'Recyclable']
+                    }
+                ],
+                'pets': [
+                    {
+                        name: 'Organic Pet Bed',
+                        description: 'Comfortable pet bed made from organic cotton',
+                        price: '$39.99',
+                        purchaseLink: 'https://example.com/organic-pet-bed',
+                        ecoFeatures: ['Organic Materials', 'Sustainable', 'Natural']
+                    },
+                    {
+                        name: 'Bamboo Pet Bowl',
+                        description: 'Eco-friendly pet food and water bowls',
+                        price: '$19.99',
+                        purchaseLink: 'https://example.com/bamboo-pet-bowl',
+                        ecoFeatures: ['Sustainable Material', 'Biodegradable', 'Natural']
+                    },
+                    {
+                        name: 'Natural Pet Shampoo',
+                        description: 'Chemical-free shampoo for pets',
+                        price: '$14.99',
+                        purchaseLink: 'https://example.com/natural-pet-shampoo',
+                        ecoFeatures: ['Natural Ingredients', 'Chemical-free', 'Sustainable']
+                    }
+                ],
+                'baby': [
+                    {
+                        name: 'Cloth Diapers',
+                        description: 'Reusable cloth diapers with organic cotton',
+                        price: '$49.99',
+                        purchaseLink: 'https://example.com/cloth-diapers',
+                        ecoFeatures: ['Reusable', 'Organic Materials', 'Zero Waste']
+                    },
+                    {
+                        name: 'Wooden Baby Toys',
+                        description: 'Natural wooden toys for babies',
+                        price: '$24.99',
+                        purchaseLink: 'https://example.com/wooden-toys',
+                        ecoFeatures: ['Natural Materials', 'Sustainable', 'Non-toxic']
+                    },
+                    {
+                        name: 'Organic Baby Clothing',
+                        description: 'Soft organic cotton clothing for babies',
+                        price: '$19.99',
+                        purchaseLink: 'https://example.com/organic-baby-clothes',
+                        ecoFeatures: ['Organic Cotton', 'Natural Dyes', 'Sustainable']
+                    }
+                ],
+                'food': [
+                    {
+                        name: 'Organic Snack Box',
+                        description: 'Assortment of organic, sustainable snacks',
+                        price: '$29.99',
+                        purchaseLink: 'https://example.com/organic-snacks',
+                        ecoFeatures: ['Organic', 'Sustainable Packaging', 'Natural']
+                    },
+                    {
+                        name: 'Reusable Food Wraps',
+                        description: 'Eco-friendly alternative to plastic wrap',
+                        price: '$18.99',
+                        purchaseLink: 'https://example.com/food-wraps',
+                        ecoFeatures: ['Reusable', 'Natural Materials', 'Zero Waste']
+                    },
+                    {
+                        name: 'Bamboo Cutlery Set',
+                        description: 'Portable sustainable eating utensils',
+                        price: '$14.99',
+                        purchaseLink: 'https://example.com/bamboo-cutlery',
+                        ecoFeatures: ['Sustainable Material', 'Reusable', 'Natural']
+                    }
+                ],
+                'cleaning': [
+                    {
+                        name: 'Eco-Friendly Laundry Detergent',
+                        description: 'Natural, biodegradable laundry detergent',
+                        price: '$19.99',
+                        purchaseLink: 'https://example.com/eco-detergent',
+                        ecoFeatures: ['Natural Ingredients', 'Biodegradable', 'Chemical-free']
+                    },
+                    {
+                        name: 'Reusable Cleaning Cloths',
+                        description: 'Washable cleaning cloths for all surfaces',
+                        price: '$12.99',
+                        purchaseLink: 'https://example.com/reusable-cloths',
+                        ecoFeatures: ['Reusable', 'Washable', 'Zero Waste']
+                    },
+                    {
+                        name: 'Natural All-Purpose Cleaner',
+                        description: 'Chemical-free cleaning solution',
+                        price: '$15.99',
+                        purchaseLink: 'https://example.com/natural-cleaner',
+                        ecoFeatures: ['Natural Ingredients', 'Chemical-free', 'Sustainable']
+                    }
+                ],
+                'fitness': [
+                    {
+                        name: 'Natural Rubber Yoga Mat',
+                        description: 'Eco-friendly yoga mat made from natural rubber',
+                        price: '$49.99',
+                        purchaseLink: 'https://example.com/natural-yoga-mat',
+                        ecoFeatures: ['Natural Materials', 'Biodegradable', 'Sustainable']
+                    },
+                    {
+                        name: 'Recycled Plastic Water Bottle',
+                        description: 'Water bottle made from recycled materials',
+                        price: '$22.99',
+                        purchaseLink: 'https://example.com/recycled-bottle',
+                        ecoFeatures: ['Recycled Materials', 'Sustainable', 'Recyclable']
+                    },
+                    {
+                        name: 'Organic Cotton Gym Bag',
+                        description: 'Sustainable gym bag made from organic cotton',
+                        price: '$34.99',
+                        purchaseLink: 'https://example.com/organic-gym-bag',
+                        ecoFeatures: ['Organic Materials', 'Sustainable', 'Natural']
                     }
                 ]
             };
